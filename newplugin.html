@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PLugin Baru</title>
+        <link href="jquery-ui.css" rel="stylesheet">
+	<style>
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	select {
+		width: 200px;
+	}
+	</style>
+    </head>
+    
+    <body>
+        <h1>Heza Wihardi(3201916131)</h1>
+        <h2 class="demoHeaders">Nama Siswa</h2>
+        <div>
+	    <input id="autocomplete" title="type &quot;a&quot;">
+        </div>
+
+        <h2 class="demoHeaders">Tangggal Lahir</h2>
+        <div id="datepicker"></div>
+
+
+        <h2 class="demoHeaders">Gender</h2>
+        <form style="margin-top: 1em;">
+        <div id="radioset">
+		<input type="radio" id="radio1" name="radio"><label for="radio1">Pria</label>
+		<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Wanita</label>
+		<input type="radio" id="radio3" name="radio"><label for="radio3">Keduanya</label></div></form>
+
+
+        <h2 class="demoHeaders">Submit</h2>
+        <button id="button">Simpan</button>
+        <button id="button-icon">An icon-only button</button>
+
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.js"></script>
+
+        <script>
+            var availableTags = [
+                "Amir",
+                "Bagus",
+                "Chery",
+                "Dimas",
+                "Ega",
+                "Fajar",
+                "Gilang",
+                "Heza",
+                "Ikhsan",
+                "Jaka",
+                "Kamil",
+                "Lala",
+                "Maman",
+                "Nurul",
+                "Ogi",
+                "Pikri",
+                "Qia",
+                "Risa",
+                "Siska",
+                "Tiur",
+                "Umar",
+                "Via",
+                "Wandy",
+                "Xiau",
+                "Yuda",
+                "Zaki"
+            ];
+            $( "#autocomplete" ).autocomplete({
+	            source: availableTags
+            });
+
+            $( "#datepicker" ).datepicker({
+	        inline: true
+            });
+
+            $("#radioset").buttonset();
+
+            $( "#button" ).button();
+            $( "#button-icon" ).button({
+	            icon: "ui-icon-gear",
+	            showLabel: false
+                });
+
+
+        </script>
+
+
+    </body>
+</html>
